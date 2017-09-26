@@ -22,10 +22,12 @@ int main(){
     printf("arr[%d]: %d\n",i,arr[i]);
   }
 
-  int *p = &arr[9];
+  int *p = arr + 9;
+  int *q = arr2;
   i = 0;
   for(i;i<10;i++){
-    arr2[i] = *p;
+    *q = *p;
+    q++;
     p--;
   }
   
